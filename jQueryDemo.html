@@ -1,0 +1,214 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click demo</title>
+  <style>
+body{
+background-color: purple;
+  
+}
+
+hr{
+  color: white;
+}
+  .textColor{
+  	color: green;
+  }
+
+  input {
+  	background-color: pink;
+    border: 2px solid black;
+  }
+  #ptext{
+  	display: none;
+  }
+  .divD{
+    display: none;
+  }
+  .divD {
+    background: yellow;
+    margin: 3px;
+    width: 80px;
+    height: 40px;
+  
+  }
+  .div {
+    background: blue;
+    margin: 3px;
+    width: 80px;
+    height: 40px;
+    
+    display: block;
+  }
+  #pFadeIn{
+     display: none;
+  }
+  
+
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+     $(document).ready(function(){
+ 
+      $('#classAdd').click(function(){
+        $('#green').addClass('textColor')
+      })
+      $('#slidetoggle').click(function(){
+        $('img').slideToggle('slow');
+      })
+      $('#click').click(function(){
+        $('#pclick').text('hey, you clicked me the button');
+      })
+      $('#Append').click(function(){
+        $('#pAppend').append('you are blessed')
+      })
+      $('#hide').click(function(){
+        $('#phide').hide('slow');
+      })
+      $('#show').click(function(){
+        $('#ptext').show('slow');
+      })
+
+      $('#toggle').click(function(){
+         $('#toogleShow').toggle();
+      })
+      $('#slideDown').click(function(){
+       $('.divD').slideDown();
+    })
+    $('#SlideUp').click(function(){
+      $( ".div" ).slideUp();
+    })
+
+    $('#fadingIn').click(function(){
+      $('#pFadeIn').fadeIn();
+    }); 
+
+    $("#fadingOut").click(function(){
+      $("#fadeOutImg").fadeOut();
+    })
+    $('#before').click(function(){
+      $('#changeP').before("Ths is a before text");
+    })
+    $('#after').click(function(){
+      $('#changeP').after("Ths is an after text");
+    })
+    $('#text').click(function(){
+      $('#textP').text("This is the new text");
+    })
+      $('#html').click(function(){
+      $('#htmlP').html("<h3>This is the new html</h3>");
+    })
+  });
+
+</script>
+</head>
+<body>
+
+ <div id="classAdd">
+ 	<input type="button" id="addclass" name="button" value="AddClass">
+ 	<span>AddClass</span>
+ 	<p id="green">Click the button to add class green to this paragraph</p>
+ </div>
+<hr>
+<div id="slideToggle">
+ 	<input type="button" id="slidetoggle" name="button" value="slideToggle"">
+ 	<span>slideToggle</span>
+ 	<p id="sToggle">Click the button to slide toggle a hidden image</p>
+ 	<img src="img/cat0.png" alt="cat image here"/>
+ </div>
+<hr>
+<div id="Append">
+ 	<input type="button" id="append" name="button" value="Append"">
+ 	<span>Append</span>
+ 	<p id="pAppend">Click the button to append a new paragraph, you added: </p>
+ </div>
+<hr>
+<div id="click">
+	<input type="button" id="click" name="button" value="click"">
+ 	<span>click</span>
+ 	<p id="pclick">click the button and see what happens</p>
+ 	
+ </div>
+<hr>
+<div id="hide">
+ 	<input type="button" id="hide" name="button" value="hide"">
+ 	<span>Hide</span>
+ 	<p id="phide">control what you see!</p>
+ </div>
+<hr>
+<div id="show">
+   	<input type="button" id="show" name="button" value="show"">
+   	<span>show</span>
+   	<p id="pshow">click and see what happens</p>
+   	<p id="ptext">you are loved:)</p>
+ </div>
+<hr>
+<div id="toggle">
+    <input type="button" id="toggle" name="toggle" value="toggle">
+    <span>Toggle</span>
+    <p id="toogleShow">click and see what happens</p>
+ </div>
+<hr>
+
+<div id="SlideDown">
+    <input type="button" id="slideDown" name="slideDown" value="slideDown">
+    <span>slideDown</span>
+    <p>click and see what happens</p>
+    <div class="divD"></div>
+    <div class="divD"></div>
+    <div class="divD"></div>
+ </div>
+<hr>
+<div id="SlideUp">
+    <input type="button" id="SlideUp" name="SlideUp" value="SlideUp">
+    <span>slideUp</span>
+    <p id="slideUp">click and see what happens</p>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+ </div>
+<hr>
+
+<div id="fadingIn">
+    <input type="button" id="fadeIn" name="fadeIn" value="fadeIn">
+    <span>fadeIn</span>
+    <p>click and see what happens</p>
+     <p id="pFadeIn">
+  Let it be known that the party of the first part
+  and the party of the second part are henceforth
+  and hereto directed to assess the allegations
+  for factual correctness..</p>
+ </div>
+<hr>
+
+ <div id="fadingOut">
+    <input type="button" id="fadeOut" name="fadeOut" value="fadeOut">
+    <span>fadeOut</span>
+    <p id="toogleShow">click and see what happens</p>
+    <img id="fadeOutImg" src="img/ninja4.png" alt="ninja">
+ </div>
+<hr>
+
+<div id="changing">
+    <input type="button" id="before" name="before" value="before">
+    <input type="button" id="after" name="after" value="after">
+    <span>After and Before</span>
+    <p id="changeP">click and see what happens</p>
+ </div>
+<hr>
+
+<div id="html">
+    <input type="button" id="html" name="html" value="html">
+    <input type="button" id="text" name="text" value="text">
+    <span>Html and text</span>
+    <p id="changeP">click and see what happens</p>
+    <p id=textP>Before a text change<p>
+    <p id=htmlP>Before a .html change<p>
+
+ </div>
+<hr>
+
+</body>
+</html>
